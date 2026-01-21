@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo animasyonu */
+.logo {
+  font-size: 72px;
+  letter-spacing: 6px;
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.overlay p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.buttons {
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 15px 32px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ff3b3b;
+}
+
+.players {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #7CFF7C;
+}
+
+#copied {
+  margin-top: 15px;
+  color: #7CFF7C;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 70px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #151515;
+  padding: 35px;
+  width: 280px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+footer {
+  background: #080808;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo animasyonu */
+.logo {
+  font-size: 72px;
+  letter-spacing: 6px;
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.overlay p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.buttons {
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 15px 32px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ff3b3b;
+}
+
+.players {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #7CFF7C;
+}
+
+#copied {
+  margin-top: 15px;
+  color: #7CFF7C;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 70px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #151515;
+  padding: 35px;
+  width: 280px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+footer {
+  background: #080808;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+/* Beyaz arka plan */
+body {
+  background: white;
+  overflow-x: hidden;
+}
+/* Düşen item alanı */
+.falling-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ortak item ayarı */
+.item {
+  position: absolute;
+  top: -80px;
+  width: 48px;
+  image-rendering: pixelated; /* MC gibi net */
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.95;
+}
+
+/* Tek tek pozisyon + hız (YAVAŞ) */
+.sword {
+  left: 15%;
+  animation-duration: 24s;
+}
+.apple {
+  left: 35%;
+  animation-duration: 28s;
+}
+.pickaxe {
+  left: 60%;
+  animation-duration: 26s;
+}
+.bow {
+  left: 80%;
+  animation-duration: 30s;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(110vh);
+  }
