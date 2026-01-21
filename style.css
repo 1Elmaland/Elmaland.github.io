@@ -240,12 +240,14 @@ footer {
   padding: 20px;
   text-align: center;
   color: #777;
-/* Beyaz arka plan */
+/* Arka plan beyaz */
 body {
   background: white;
   overflow-x: hidden;
+  position: relative;
 }
-/* Düşen item alanı */
+
+/* Düşen item alanı (ARKA PLAN) */
 .falling-items {
   position: fixed;
   top: 0;
@@ -253,22 +255,20 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1; /* EN ÖNEMLİ SATIR */
 }
 
-/* Ortak item ayarı */
+/* Itemler */
 .item {
   position: absolute;
-  top: -80px;
+  top: -100px;
   width: 48px;
-  image-rendering: pixelated; /* MC gibi net */
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  opacity: 0.95;
+  image-rendering: pixelated;
+  animation: fall linear infinite;
+  opacity: 0.9;
 }
 
-/* Tek tek pozisyon + hız (YAVAŞ) */
+/* Konum + hız (YAVAŞ) */
 .sword {
   left: 15%;
   animation-duration: 24s;
@@ -288,8 +288,9 @@ body {
 
 @keyframes fall {
   from {
-    transform: translateY(-100px);
+    transform: translateY(-120px);
   }
   to {
     transform: translateY(110vh);
   }
+}
