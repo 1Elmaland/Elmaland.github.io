@@ -1,2 +1,2 @@
 # Elmaland.github.io
-Resmi ElmaLand Sİtesi
+Resmi ElmaLand Sitesi
